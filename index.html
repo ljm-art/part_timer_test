@@ -403,9 +403,25 @@
       max-width: 500px;
       padding: 16px 20px;
       padding-bottom: max(16px, env(safe-area-inset-bottom));
-      background: linear-gradient(to top, white 85%, transparent);
+      background: white;
       z-index: 1000;
     }
+
+	.btn-main.coin {
+	  display: inline-block;
+	  animation: coinBob1.1s ease-in-out infinite;
+	}
+
+	.btn-main.coin.right {
+	  animation-delay:0.15s;
+	}
+
+	@keyframes coinBob {
+	  0%,100% {transform:translateY(0); }
+	  50% {transform:translateY(-3px); }
+	}
+
+
 
     .btn-main {
       width: 100%;
@@ -1810,9 +1826,11 @@
 
   <!-- ========== 하단 고정 CTA ========== -->
   <div class="footer-cta">
-    <button onclick="openFormPopup()" class="btn-main">
-      <span>💰</span> 리워드 정산 정보 입력하기
-    </button>
+	<buttononclick="openFormPopup()"class="btn-main">
+	  <spanclass="coin left">💰</span>
+  	  리워드 정산 정보 입력하기
+	  <spanclass="coin right">💰</span>
+	</button>
   </div>
 
   <!-- ========== 바텀시트 폼 팝업 ========== -->
