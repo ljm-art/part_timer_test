@@ -878,7 +878,7 @@
 
     .header {
       text-align: center;
-      padding: 32px 0 24px;
+      padding: 36px 0 34px;
     }
 
     .header-badge {
@@ -889,14 +889,14 @@
       font-weight: 700;
       padding: 6px 12px;
       border-radius: 20px;
-      margin-bottom: 12px;
+      margin-bottom: 18px;
     }
 
     .header h1 {
       font-size: 26px;
       font-weight: 800;
       color: var(--gray-900);
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       line-height: 1.3;
     }
 
@@ -1388,6 +1388,35 @@
       font-size: 12px;
       color: var(--gray-500);
     }
+
+	.contact-info-box {
+	  background:var(--gray-50);
+	  border:1px solidvar(--gray-200);
+	  border-radius:var(--radius-sm);
+	  padding:14px12px;
+	  text-align: left;
+	}
+
+	.contact-info-box.title {
+	  font-size:12px;
+	  font-weight:700;
+	  color:var(--gray-600);
+	  margin-bottom:6px;
+	}
+
+	.contact-info-box.phone {
+	  font-size:16px;
+	  font-weight:800;
+	  color:var(--accent);
+	  letter-spacing:0.2px;
+	}
+	
+	.contact-info-box.note {
+	  font-size:12px;
+	  color:var(--gray-500);
+	  margin-top:6px;
+	  line-height:1.5;
+	}
   </style>
 </head>
 <body>
@@ -1812,15 +1841,17 @@
     <!-- Contact -->
     <div class="contact-section">
       <h3>📞 궁금한 내용은<br>아래 채널을 통해 문의해주세요!</h3>
-      <div class="contact-buttons">
-        <a href="https://passorder.kr/e2zIF3ai" class="contact-btn primary">
-          <span>📝</span> 문의 채널에 남기기
-        </a>
-        <a href="https://passorder.kr/NabSZFl1" class="contact-btn kakao">
-          <span>💬</span> 1:1 문의하기
-        </a>
-      </div>
-      <p class="contact-time">운영시간: 평일 10:00 ~ 18:00</p>
+	  <divclass="contact-buttons">
+		<a...>문의 채널에 남기기</a>
+		<a...>1:1 문의하기</a>
+		
+		<divclass="contact-info-box">
+		<divclass="title">📩 문자 문의</div>
+		<divclass="phone">010-8436-5209</div>
+		<divclass="note">※ 전화 불가, 문자로만 문의 및 안내 가능합니다</div>
+		</div>
+		</div>
+		<pclass="contact-time">운영시간: 평일 10:00 ~ 18:00</p>
     </div>
   </div>
 
@@ -2051,7 +2082,7 @@
       <div id="submit-success" class="submit-success">
         <div class="icon">🎉</div>
         <h3>정산 정보 등록 완료!</h3>
-        <p>이제 쿠폰을 전달하고<br>리워드를 받아보세요!</p>
+        <p>이제 영업일 3~4일 내로 <br>손님 전달용 쿠폰이 배송될 예정이에요!</p>
         <button onclick="closeFormPopup()" class="btn-close-success">확인</button>
       </div>
     </div>
