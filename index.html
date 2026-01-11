@@ -393,6 +393,39 @@
       cursor: pointer;
     }
 
+	.intro-cta-preview{
+	  width: 100%;
+	  max-width: 280px;
+	  margin: 12px auto 6px;
+	  display: block;
+	  border-radius: 18px;
+	  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+	  transform-origin: center;
+	  animation: ctaPulse 1.2s ease-in-out infinite;
+	}
+	
+	.intro-cta-hint{
+	  font-size: 13px;
+	  color: var(--gray-600);
+	  margin-bottom: 6px;
+	}
+	
+	@keyframes ctaPulse{
+	  0%,100% { transform: translateY(0) scale(1); }
+	  50%     { transform: translateY(-2px) scale(1.02); }
+	}
+
+
+	html { -webkit-text-size-adjust: 100%; }
+
+	.form-group input{
+	  line-height: 1.2;       /* ✅ 커서 베이스라인 안정화 */
+	  height: 56px;           /* ✅ 높이를 고정하면 더 안정적 */
+	  padding: 0 16px;        /* (기존 16px 상하패딩 대신) */
+	}
+
+
+
     /* ========== 하단 고정 CTA ========== */
     .footer-cta {
       position: fixed;
@@ -1392,7 +1425,7 @@
 	  border: 1px solid var(--gray-200);
 	  border-radius: var(--radius-sm);
 	  padding: 14px 12px;
-	  text-align: left;
+	  text-align: center;
 	}
 	
 	.contact-info-box .title{
@@ -1430,10 +1463,15 @@
           <div class="intro-step-num">1</div>
           <div class="intro-step-text">참여를 위한 <strong>가이드</strong>를 꼼꼼히 확인해주세요</div>
         </div>
-        <div class="intro-step">
-          <div class="intro-step-num">2</div>
-          <div class="intro-step-text">하단의 <strong>리워드 정산 정보 입력하기</strong> 버튼을 눌러주세요</div>
-        </div>
+
+		<div class="intro-step">
+		  <div class="intro-step-num">2</div>
+		  <div class="intro-step-text">하단의 <strong>리워드 정산 정보 입력하기</strong> 버튼을 눌러주세요</div>
+		</div>
+		
+		<img class="intro-cta-preview" src="images/reward.png" alt="리워드 정산 정보 입력하기 버튼 예시">
+		<p class="intro-cta-hint">👇 이 버튼을 꼭 눌러야 참여가 확정돼요!</p>
+
         <div class="intro-step">
           <div class="intro-step-num">3</div>
           <div class="intro-step-text">정보 입력 완료 시 <strong>참여 확정!</strong></div>
